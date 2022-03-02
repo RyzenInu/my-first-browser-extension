@@ -76,10 +76,12 @@
     var url = "https://api.myanimelist.net/v2/users/" + username + "/animelist";
     var headerOptions = {
         headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
             "X-MAL-CLIENT-ID": "14d931de197398ffa9d22d6febdd3d57"
         }
     }
-    fetch(url, headerOptions)
+    fetch('https://api.myanimelist.net/v2/users/Ryzen_Inu/animelist', {headers: {'X-MAL-CLIENT-ID': '14d931de197398ffa9d22d6febdd3d57'}})
     .then(response => {
         return response.json();
     })
